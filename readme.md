@@ -2,7 +2,11 @@
 
 Monorepo for Kiira's micro-services, cron jobs, and shared libraries.
 
-## Identity Service
+## Callback Micro-Service
+
+A gateway API for registering webhooks and callbacks with external services. The endpoints registered here should proxy the given payloads to their respective Kiira micro-services. For example, event subscriptions with Elation should proxy to the Platform Micro-Service. Event subscriptions with Stripe should proxy to the Commerce Micro-Service.
+
+## Identity Micro-Service
 
 A micro-service responsibile for authentication/authorization for Kiira members, experts, and administrators. Abstracts 3rd-party identity service providers such as Firebase Authentication or Auth0.
 
@@ -10,7 +14,7 @@ A micro-service responsibile for authentication/authorization for Kiira members,
 
 - __Users__ - Handles use cases for user registration, profile and preferences management, and authorization. 
 
-## Payments Service
+## Commerce Micro-Service
 
 A micro-service responsible for payment processing. Abstracts one or more payment processing services such as Stripe.
 
@@ -18,7 +22,7 @@ A micro-service responsible for payment processing. Abstracts one or more paymen
 
 - __Billing__ - Handles use cases for transactional and recurring payments.
 
-## Platform Service
+## Platform Micro-Service
 
 A _macro_-service responsible for handling most of Kiira platform's use cases. As the bounded contexts grow in size, those contexts can be extracted into their own new micro-services. Abstracts 3rd-party services such as the cloud EHR system, Sendgrid, and Firebase.
 
