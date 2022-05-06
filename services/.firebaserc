@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "kiira-health-dev",
+    "develop": "kiira-health-dev",
+    "staging": "kiira-health-stg",
+    "production": "kiira-health-app"
+  }
+}

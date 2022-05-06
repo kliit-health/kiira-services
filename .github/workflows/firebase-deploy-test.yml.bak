@@ -1,0 +1,14 @@
+name: Deploy Firebase Functions to Google Firebase
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+    paths:
+      - 'firebase/**'
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./firebase/functions
